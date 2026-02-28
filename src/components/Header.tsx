@@ -44,7 +44,7 @@ const Header = () => {
                 key={index}
                 className={`${className} duration-500 transition-all absolute w-full ease-in-out text-sm sm:text-2xl md:text-4xl `}
               >
-                REACT-TESTING-LIBRARY
+                {skill}
               </h1>
             );
           })}
