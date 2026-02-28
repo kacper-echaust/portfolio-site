@@ -1,1 +1,13 @@
 @import "tailwindcss";
+body {
+  background-color: black;
+}
+.bg-grid-lines {
+  background: #424242;
+  background: linear-gradient(
+    0deg,
+    rgba(66, 66, 66, 1) 25%,
+    rgba(74, 74, 74, 1) 69%,
+    rgba(138, 138, 138, 0.47) 90%
+  );
+}
