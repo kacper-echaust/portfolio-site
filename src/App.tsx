@@ -4,14 +4,10 @@ import { Header } from "./components/Header";
 
 const App = () => {
   return (
-    <>
-      <Container>
-        <GridBackground />
-      </Container>
-      <Container>
-        <Header />
-      </Container>
-    </>
+    <Container>
+      <GridBackground />
+      <Header />
+    </Container>
   );
 };
 
