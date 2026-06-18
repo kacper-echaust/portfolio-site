@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  background-color: black;
+  background-color: #050505;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -14,4 +14,9 @@ body {
     rgba(74, 74, 74, 1) 69%,
     rgba(138, 138, 138, 0.47) 90%
   );
+}
+@theme {
+  --color-primaryOrange: #d4af37;
+  --color-primaryGray: #c0c0c0;
+  --color-primaryBlack: #050505;
 }
