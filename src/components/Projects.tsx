@@ -13,12 +13,17 @@ const Projects = () => {
     setActiveProjectId(activeProjectId === id ? null : id);
   };
 
+  const cardStackHeightRem = projects.length * 8;
+
   return (
     <section
-      className={`min-h-screen bg-black py-20 px-4 transition-all duration-500 ${activeProjectId !== null ? "pb-240" : "pb-140 md:pb-180"}`}
+      className={`min-h-screen bg-black py-20 px-4 transition-all duration-500 ${activeProjectId !== null ? "pb-60" : "pb-35 md:pb-45"}`}
     >
       <HeadingSection text="Projekty" />
-      <div className="flex flex-col place-items-center relative max-w-4xl mx-auto w-full">
+      <div
+        className="flex flex-col place-items-center relative max-w-4xl mx-auto w-full"
+        style={{ minHeight: `calc(80vh + ${cardStackHeightRem}rem)` }}
+      >
         {projects.map((project, index) => {
           const isActive = activeProjectId === project.id;
           const anyCardOpen = activeProjectId !== null;
