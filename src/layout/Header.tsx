@@ -24,7 +24,10 @@ const Header = () => {
     return () => clearInterval(interval);
   }, [activeIndex]);
   return (
-    <header className="min-h-screen text-white relative flex items-center  ">
+    <header
+      id="home"
+      className="min-h-screen pt-24 text-white relative flex items-center"
+    >
       {/* Text */}
       <div className="text-4xl font-light md:text-5xl lg:text-6xl w-full">
         <h1 className="mb-6">Kacper Echaust</h1>

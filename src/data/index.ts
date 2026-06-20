@@ -100,3 +100,8 @@ export const projects = [
     github: "https://github.com/kacper-echaust/task-app-redux",
   },
 ];
+export const navItems = [
+  { label: "O mnie", href: "#about" },
+  { label: "Projekty", href: "#projects" },
+  { label: "Umiejętności", href: "#skills" },
+];
