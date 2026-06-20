@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <section
-      className={`min-h-screen bg-black py-20 px-4 transition-all duration-500 ${activeProjectId !== null ? "pb-60" : "pb-35 md:pb-45"}`}
+      className={`min-h-screen bg-black py-20  transition-all duration-500 ${activeProjectId !== null ? "pb-60" : "pb-35 md:pb-45"}`}
     >
       <HeadingSection text="Projekty" />
       <div
