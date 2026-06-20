@@ -2,6 +2,7 @@ import { Container } from "./components/Container";
 import { GridBackground } from "./components/GridBackground";
 import { Header } from "./layout/Header";
 import { Projects } from "./components/Projects";
+import { TechStack } from "./components/TechStack";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <GridBackground />
       <Header />
       <Projects />
+      <TechStack />
     </Container>
   );
 };
