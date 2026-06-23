@@ -20,7 +20,7 @@ const iconStyles = "text-9xl tech-icon";
 
 const TechStack = () => {
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen" id="skills">
       <HeadingSection text="Umiejętności" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-3 lg:gap-2 min-h-screen">
         <div className={`lg:col-span-2 lg:row-span-2 ${containerIconStyles}`}>

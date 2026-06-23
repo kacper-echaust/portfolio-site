@@ -28,7 +28,7 @@ const jobs = [
 
 const AboutMe = () => {
   return (
-    <section className="min-h-screen py-20">
+    <section className="min-h-screen py-20" id="about">
       <HeadingSection text="o mnie" />
 
       <div className="grid gap-10 lg:grid-cols-[0.75fr_2.25fr]">
