@@ -101,3 +101,6 @@ body {
 canvas {
   height: 400px !important;
 }
+html {
+  scroll-behavior: smooth;
+}
