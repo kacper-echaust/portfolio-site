@@ -30,10 +30,10 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="min-h-screen pt-24 text-white relative overflow-hidden flex flex-col items-center lg:flex-row lg:items-start"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-visible pt-24 text-white lg:flex-row lg:items-center"
     >
-      <div className="relative mx-auto flex max-w-6xl flex-col  gap-12 text-center lg:flex-row w-full">
-        <div className="space-y-6 lg:max-w-[55%] lg:text-left">
+      <div className="relative mx-auto flex w-full max-w-8xl flex-col gap-6 text-center lg:min-h-screen lg:flex-row">
+        <div className="flex flex-col justify-center space-y-6 sm:max-w-[90%] md:max-w-[85%] lg:max-w-[55%] lg:text-left">
           <div className="space-y-3">
             <h1 className="text-5xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
               Kacper Echaust
@@ -64,10 +64,18 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
-        <Canvas>
+      <div className="relative h-80 w-full overflow-visible sm:h-95 md:h-115 lg:h-140 lg:w-[55%]">
+        <Canvas
+          camera={{ position: [0, 0, 7.2], fov: 38 }}
+          className="h-full w-full"
+        >
           <ambientLight intensity={1.5} />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={0}
+          />
           <Suspense fallback={null}>
             <Model />
           </Suspense>

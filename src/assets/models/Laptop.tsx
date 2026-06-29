@@ -7,20 +7,55 @@ Source: https://sketchfab.com/3d-models/laptop-with-code-0a06208ac22b45c4814dea4
 Title: laptop with code
 */
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useGraph } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import {
+  type BufferGeometry,
+  type Group,
+  type Material,
+  type Object3D,
+  type Skeleton,
+} from "three";
 import { SkeletonUtils } from "three-stdlib";
 
-const Model = (props) => {
-  const group = React.useRef();
+type MeshNode = Object3D & {
+  geometry?: BufferGeometry;
+  material?: Material | Material[];
+  skeleton?: Skeleton;
+};
+
+type GraphData = {
+  nodes: Record<string, MeshNode>;
+  materials: Record<string, Material | Material[]>;
+};
+
+const Model = (props: React.ComponentProps<"group">) => {
+  const group = React.useRef<Group>(null);
   const { scene, animations } = useGLTF("/laptop.gltf");
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
-  const { nodes, materials } = useGraph(clone);
+  const { nodes, materials } = useGraph(clone) as GraphData;
   const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    const firstAction = actions ? Object.values(actions)[0] : undefined;
+
+    if (firstAction) {
+      firstAction.reset();
+      firstAction.time = firstAction.getClip().duration;
+      firstAction.play();
+      firstAction.clampWhenFinished = true;
+      firstAction.setLoop(2200, 1);
+    }
+  }, [actions]);
+
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
+      <group
+        name="Sketchfab_Scene"
+        position={[0, -0.15, 0]}
+        scale={[0.6, 0.6, 0.6]}
+      >
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
