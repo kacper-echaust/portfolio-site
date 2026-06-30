@@ -36,7 +36,7 @@ const AboutMe = () => {
         initial={{ opacity: 0, y: 150 }}
         animate={{ opacity: 1 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         className="grid gap-10 lg:grid-cols-[0.75fr_2.25fr]"
       >
         <div className="space-y-10 text-neutral-200">

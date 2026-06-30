@@ -15,7 +15,7 @@ const AnimationDiv = ({ className, children }: Props) => {
     <motion.div
       initial={{ opacity: 0, x: randomCoords.x, y: randomCoords.y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
       className={className}
     >
       {children}
