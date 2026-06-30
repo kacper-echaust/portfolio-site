@@ -1,6 +1,7 @@
 import { HeadingSection } from "./HeadingSection";
 import { FaBriefcase } from "react-icons/fa";
 import portfolio from "../assets/images/portfolio-photo.jpg";
+import { motion } from "framer-motion";
 
 const jobs = [
   {
@@ -31,7 +32,13 @@ const AboutMe = () => {
     <section className="min-h-screen py-20" id="about">
       <HeadingSection text="o mnie" />
 
-      <div className="grid gap-10 lg:grid-cols-[0.75fr_2.25fr]">
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="grid gap-10 lg:grid-cols-[0.75fr_2.25fr]"
+      >
         <div className="space-y-10 text-neutral-200">
           <div className="rounded-4xl border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm">
             <div className="relative overflow-hidden rounded-[1.7rem] border border-white/10 bg-linear-to-br from-white/10 via-white/5 to-black/30 h-96">
@@ -70,7 +77,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Jobs */}
       <div className="mt-12 rounded-4xl border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm">
@@ -90,7 +97,14 @@ const AboutMe = () => {
           <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />
           {jobs.map((job) => {
             return (
-              <div className="relative" key={job.id}>
+              <motion.div
+                initial={{ opacity: 0, x: job.id % 2 === 0 ? 150 : -150 }}
+                animate={{ opacity: 1 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative"
+                key={job.id}
+              >
                 <div className="absolute -left-6 top-2 h-3 w-3 rounded-full bg-primaryOrange border border-white/20" />
                 <p className="text-sm uppercase tracking-[0.25em] text-white/70 mb-2">
                   {job.year}
@@ -99,7 +113,7 @@ const AboutMe = () => {
                   {job.title}
                 </h5>
                 <p className="text-neutral-300 leading-7">{job.description}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
