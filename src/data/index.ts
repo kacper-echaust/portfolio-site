@@ -104,4 +104,5 @@ export const navItems = [
   { label: "O mnie", href: "#about" },
   { label: "Projekty", href: "#projects" },
   { label: "Umiejętności", href: "#skills" },
+  { label: "Kontakt", href: "#contact" },
 ];
