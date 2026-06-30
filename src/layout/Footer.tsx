@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black pt-64 mt-12">
+    <footer
+      className="relative overflow-hidden border-t border-white/10 bg-black pt-64 mt-12"
+      id="contact"
+    >
       <motion.div
         initial={{ opacity: 0, y: -300 }}
         whileInView={{ opacity: 1, y: 0 }}
