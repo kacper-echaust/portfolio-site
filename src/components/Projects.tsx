@@ -2,6 +2,7 @@ import { useState } from "react";
 import { projects } from "../data";
 import { CustomButton } from "./CustomButton";
 import { HeadingSection } from "./HeadingSection";
+import { motion } from "framer-motion";
 
 const buttonStyles =
   "z-30 hover:bg-primaryOrange transition-all text-white border border-white/20 hover:border-transparent px-5 py-2 rounded-lg backdrop-blur-sm font-medium";
@@ -30,7 +31,9 @@ const Projects = () => {
           const anyCardOpen = activeProjectId !== null;
 
           return (
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: index % 2 === 0 ? 300 : -300 }}
+              whileInView={{ opacity: 1, x: 0 }}
               key={project.id}
               onClick={() => handleCardClick(project.id)}
               className={`w-full absolute transition-all duration-500 ease-in-out cursor-pointer
@@ -93,7 +96,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

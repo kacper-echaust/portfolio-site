@@ -1,12 +1,29 @@
+import { motion } from "framer-motion";
+
 type Props = {
   text: string;
 };
 
 const HeadingSection = ({ text }: Props) => {
   return (
-    <h3 className="uppercase border-b border-white w-full text-white text-4xl py-6 mb-12">
-      {text}
-    </h3>
+    <div className="relative">
+      <motion.h3
+        initial={{ opacity: 0, x: 400 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative uppercase  w-full text-white text-4xl py-6 mb-12"
+      >
+        {text}
+      </motion.h3>
+      <motion.span
+        initial={{ opacity: 0, width: 0 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ width: "100%" }}
+        transition={{ duration: 0.5 }}
+        className="absolute h-px w-full bottom-0 bg-white"
+      ></motion.span>
+    </div>
   );
 };
 
