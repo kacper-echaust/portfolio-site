@@ -6,6 +6,7 @@ import { TechStack } from "./components/TechStack";
 import { AboutMe } from "./components/AboutMe";
 import { Navigation } from "./layout/Navigation";
 import { MobileNavigation } from "./layout/MobileNavigation";
+import { Footer } from "./layout/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <AboutMe />
       <Projects />
       <TechStack />
+      <Footer />
     </Container>
   );
 };
