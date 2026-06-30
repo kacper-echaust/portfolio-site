@@ -64,11 +64,14 @@ const Footer = () => {
       -translate-y-1/2
       select-none
       whitespace-nowrap
-      text-[14rem]
+      text-[4rem]
+      md:text-[8rem]
+      lg:text-[12rem]
       font-black
       uppercase
       tracking-tight
       text-white/8
+
     "
       >
         FRONTEND
