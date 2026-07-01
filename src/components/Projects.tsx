@@ -43,11 +43,12 @@ const Projects = () => {
                     ? "h-[90vh] top-0! rotate-0! translate-y-0! z-50"
                     : "h-[60vh] md:h-[80vh] hover:-translate-y-10 hover:rotate-1 hover:z-40"
                 }
-                ${anyCardOpen && !isActive ? "opacity-20 pointer-events-none scale-95" : "opacity-100"}
+                ${anyCardOpen && !isActive ? " pointer-events-none scale-95" : "opacity-100"}
               `}
               style={{
                 top: isActive ? "0rem" : `${project.id * 8}rem`,
                 backgroundImage: `url(${project.photo})`,
+                backgroundColor: isActive ? "black" : "transparent",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
