@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-visible pt-24 text-white lg:flex-row lg:items-center"
+      className="relative flex min-h-screen flex-col-reverse md:flex-col items-center justify-center overflow-visible pt-24 text-white lg:flex-row lg:items-center"
     >
       <div className="relative mx-auto flex w-full max-w-8xl flex-col gap-6 text-center lg:min-h-screen lg:flex-row">
         <div className="flex flex-col justify-center space-y-6 sm:max-w-[90%] md:max-w-[85%] lg:max-w-[55%] lg:text-left">
