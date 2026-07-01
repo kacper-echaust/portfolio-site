@@ -34,6 +34,7 @@ const Projects = () => {
             <motion.div
               initial={{ opacity: 0, x: index % 2 === 0 ? 300 : -300 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               key={project.id}
               onClick={() => handleCardClick(project.id)}
               className={`w-full absolute transition-all duration-500 ease-in-out cursor-pointer
@@ -42,24 +43,25 @@ const Projects = () => {
                     ? "h-[90vh] top-0! rotate-0! translate-y-0! z-50"
                     : "h-[60vh] md:h-[80vh] hover:-translate-y-10 hover:rotate-1 hover:z-40"
                 }
-                ${anyCardOpen && !isActive ? "opacity-20 pointer-events-none scale-95" : "opacity-100"}
+                ${anyCardOpen && !isActive ? " pointer-events-none scale-95" : "opacity-100"}
               `}
               style={{
                 top: isActive ? "0rem" : `${project.id * 8}rem`,
                 backgroundImage: `url(${project.photo})`,
+                backgroundColor: isActive ? "black" : "transparent",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: isActive ? "center" : "top",
                 backgroundRepeat: "no-repeat",
                 zIndex: isActive ? 50 : index,
               }}
             >
               <div
                 className={`group w-full h-full relative overflow-hidden border transition-all duration-500 rounded-2xl
-                ${isActive ? "border-primaryOrange shadow-[0_0_60px_rgba(249,115,22,0.3)]" : "border-white/10 shadow-2xl hover:border-primaryOrange hover:shadow-[0_0_50px_rgba(249,115,22,0.2)]"}
+                ${isActive ? "border-primaryOrange " : "border-white/10 shadow-2xl hover:border-primaryOrange hover:shadow-[0_0_50px_rgba(249,115,22,0.2)]"}
               `}
               >
                 <div
-                  className={`absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-black/80 z-10 transition-all duration-500 ${isActive ? "from-black via-black/60" : ""}`}
+                  className={`absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-black/80 z-10 transition-all duration-500 `}
                 />
 
                 <div className="absolute top-0 left-0 w-full z-20 bg-black/40 backdrop-blur-md border-b border-white/10 p-6 flex items-center justify-center">

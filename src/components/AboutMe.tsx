@@ -37,6 +37,7 @@ const AboutMe = () => {
         animate={{ opacity: 1 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
+        viewport={{ once: true }}
         className="grid gap-10 lg:grid-cols-[0.75fr_2.25fr]"
       >
         <div className="space-y-10 text-neutral-200">
@@ -102,6 +103,7 @@ const AboutMe = () => {
                 animate={{ opacity: 1 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="relative"
                 key={job.id}
               >

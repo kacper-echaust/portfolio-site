@@ -10,10 +10,13 @@ const Footer = () => {
         initial={{ opacity: 0, y: -300 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="mx-auto max-w-7xl px-6 py-24"
+        className="mx-auto max-w-7xl md:px-6 py-24"
       >
-        <h2 className="text-center text-6xl font-black uppercase leading-none tracking-tight text-white sm:text-8xl lg:text-[10rem]">
+        <h2 className="relative text-center text-5xl md:text-6xl lg:text-8xl font-black uppercase  text-white">
           Zbudujmy coś razem
+          <div className=" pointer-events-none absolute text-[48px] md:text-6xl lg:text-8xl uppercase text-white/8 text-center w-full top-5 font-stretch-expanded">
+            FRONTEND
+          </div>
         </h2>
 
         <div className="mx-auto mt-12 max-w-xl text-center">
@@ -56,29 +59,6 @@ const Footer = () => {
           </div>
         </div>
       </motion.div>
-
-      <div
-        className="
-      pointer-events-none
-      absolute
-      left-1/2
-      top-1/2
-      -translate-x-1/2
-      -translate-y-1/2
-      select-none
-      whitespace-nowrap
-      text-[4rem]
-      md:text-[8rem]
-      lg:text-[12rem]
-      font-black
-      uppercase
-      tracking-tight
-      text-white/8
-
-    "
-      >
-        FRONTEND
-      </div>
     </footer>
   );
 };
