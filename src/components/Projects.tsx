@@ -34,6 +34,7 @@ const Projects = () => {
             <motion.div
               initial={{ opacity: 0, x: index % 2 === 0 ? 300 : -300 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               key={project.id}
               onClick={() => handleCardClick(project.id)}
               className={`w-full absolute transition-all duration-500 ease-in-out cursor-pointer
