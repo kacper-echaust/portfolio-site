@@ -50,18 +50,18 @@ const Projects = () => {
                 backgroundImage: `url(${project.photo})`,
                 backgroundColor: isActive ? "black" : "transparent",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: isActive ? "center" : "top",
                 backgroundRepeat: "no-repeat",
                 zIndex: isActive ? 50 : index,
               }}
             >
               <div
                 className={`group w-full h-full relative overflow-hidden border transition-all duration-500 rounded-2xl
-                ${isActive ? "border-primaryOrange shadow-[0_0_60px_rgba(249,115,22,0.3)]" : "border-white/10 shadow-2xl hover:border-primaryOrange hover:shadow-[0_0_50px_rgba(249,115,22,0.2)]"}
+                ${isActive ? "border-primaryOrange " : "border-white/10 shadow-2xl hover:border-primaryOrange hover:shadow-[0_0_50px_rgba(249,115,22,0.2)]"}
               `}
               >
                 <div
-                  className={`absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-black/80 z-10 transition-all duration-500 ${isActive ? "from-black via-black/60" : ""}`}
+                  className={`absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-black/80 z-10 transition-all duration-500 `}
                 />
 
                 <div className="absolute top-0 left-0 w-full z-20 bg-black/40 backdrop-blur-md border-b border-white/10 p-6 flex items-center justify-center">
