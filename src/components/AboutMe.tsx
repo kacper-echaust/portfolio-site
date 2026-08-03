@@ -6,18 +6,19 @@ import { motion } from "framer-motion";
 const jobs = [
   {
     id: 1,
-    title: "Moraj | Koordynator ds. obsługi zamówień klientów kluczowych",
-    year: "2025 - teraz",
-    description:
-      "Koordynuję pracę 6‑osobowego zespołu, dbając o efektywne planowanie zadań i terminową realizację wysyłek, gdzie opóźnienia wiążą się z wysokimi karami. Pracuję pod presją czasu, szybko reaguję na braki kadrowe i organizuję dodatkowe wsparcie, gdy sytuacja tego wymaga. Szkolę nowych pracowników oraz stale usprawniam procesy, aby zwiększać wydajność i komfort pracy całego zespołu.",
-  },
-  {
-    id: 2,
     title: "Frontend Developer",
     year: "2026 (styczeń) - teraz",
     description:
       "Biorę udział w tworzeniu strony internetowej Fundacji Szczęśliwsi, pracując w zespole nad wspólnym repozytorium. Realizuję zadania projektowe z wykorzystaniem React, uczestniczę w planowaniu prac oraz wykonuję code review, dbając o jakość i spójność kodu w projekcie.",
   },
+  {
+    id: 2,
+    title: "Moraj | Koordynator ds. obsługi zamówień klientów kluczowych",
+    year: "2025 - teraz",
+    description:
+      "Koordynuję pracę 6‑osobowego zespołu, dbając o efektywne planowanie zadań i terminową realizację wysyłek, gdzie opóźnienia wiążą się z wysokimi karami. Pracuję pod presją czasu, szybko reaguję na braki kadrowe i organizuję dodatkowe wsparcie, gdy sytuacja tego wymaga. Szkolę nowych pracowników oraz stale usprawniam procesy, aby zwiększać wydajność i komfort pracy całego zespołu.",
+  },
+
   {
     id: 3,
     title: "Specjalista ds. klientów kluczowych",
