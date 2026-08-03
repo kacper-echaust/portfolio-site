@@ -40,13 +40,15 @@ const Projects = () => {
               className={`w-full absolute transition-all duration-500 ease-in-out cursor-pointer
                 ${
                   isActive
-                    ? "h-[90vh] top-0! rotate-0! translate-y-0! z-50"
+                    ? "h-[90vh] rotate-0!  z-50"
                     : "h-[60vh] md:h-[80vh] hover:-translate-y-10 hover:rotate-1 hover:z-40"
                 }
                 ${anyCardOpen && !isActive ? " pointer-events-none scale-95" : "opacity-100"}
               `}
               style={{
-                top: isActive ? "0rem" : `${project.id * 8}rem`,
+                top: isActive
+                  ? `${project.id * 100}px`
+                  : `${project.id * 8}rem`,
                 backgroundImage: `url(${project.photo})`,
                 backgroundColor: isActive ? "black" : "transparent",
                 backgroundSize: "contain",
@@ -67,6 +69,11 @@ const Projects = () => {
                 <div className="absolute top-0 left-0 w-full z-20 bg-black/40 backdrop-blur-md border-b border-white/10 p-6 flex items-center justify-center">
                   <h3 className="text-white font-semibold text-2xl md:text-3xl tracking-wide uppercase">
                     {project.title}
+                    <button
+                      className={`absolute right-5 ${isActive ? "display" : "hidden"} cursor-pointer`}
+                    >
+                      x
+                    </button>
                   </h3>
                 </div>
 
